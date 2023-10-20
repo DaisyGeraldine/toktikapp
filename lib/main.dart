@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<DiscoverProvider>(
-          create: (context) => DiscoverProvider(),
+          lazy: false,
+          create: (context) => DiscoverProvider()..loadNextPage(),
         ),
       ],
       child: MaterialApp(
