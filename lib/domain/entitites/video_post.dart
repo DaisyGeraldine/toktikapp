@@ -6,7 +6,7 @@ class VideoPost {
   VideoPost({
     required this.caption,
     required this.videoUrl,
-    required this.likes,
-    required this.views,
+    this.likes = 0,
+    this.views = 0,
   });
 }

@@ -19,13 +19,13 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<DiscoverProvider>(
           lazy: false,
-          create: (context) => DiscoverProvider()..loadNextPage(),
+          create: (_) => DiscoverProvider()..loadNextPage(),
         ),
       ],
       child: MaterialApp(
         title: 'TokTik',
         debugShowCheckedModeBanner: false,
-        theme: AppTheme().theme(),
+        theme: AppTheme().getTheme(),
         home: DiscoverScreen(),
       ),
     );

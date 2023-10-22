@@ -20,7 +20,7 @@ class DiscoverScreen extends StatelessWidget {
         ),
       )
       : VideoScrollableView(
-        videos: discoverProvider.videoPosts,
+        videos: discoverProvider.videos,
       ),
     );
   }
